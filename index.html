@@ -39,15 +39,25 @@
     }
     .form-group {
       margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
     input[type="text"],
     input[type="email"] {
       width: 100%;
-      padding: 0.8rem;
+      padding: 1rem;
       font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+      border: 2px solid #d7c2b0;
+      border-radius: 12px;
+      background-color: #fffaf5;
+      transition: all 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #a3684a;
+      box-shadow: 0 0 0 2px rgba(163,104,74,0.2);
     }
     button {
       background-color: #a3684a;
@@ -57,11 +67,12 @@
       font-size: 1rem;
       border-radius: 30px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.2s ease;
       width: 100%;
     }
     button:hover {
       background-color: #8d553a;
+      transform: scale(1.02);
     }
     .footer {
       margin-top: 2rem;
@@ -100,7 +111,7 @@
       <li>🧩 Un bonus éducatif surprise à imprimer</li>
       <li>💌 Des conseils malins, poétiques et familiaux chaque mois</li>
     </ul>
-    <form action="https://dashboard.mailerlite.com/forms/158951040526320981/" method="post" target="_blank">
+    <form action="https://assets.mlcdn.com/fonts.css?version=1751550" method="post" target="_blank">
       <div class="form-group">
         <input type="text" name="fields[name]" placeholder="Votre prénom" required />
         <input type="email" name="fields[email]" placeholder="Votre email" required />
